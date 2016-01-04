@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="telascontroller.OrcamentoController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f7f9fc" height="211.0" layoutX="14.0" layoutY="41.0" stroke="BLACK" strokeType="INSIDE" width="941.0" />
+      <Label layoutX="721.0" layoutY="138.0" text="Fone*" />
+      <Label layoutX="570.0" layoutY="138.0" text="Nº*" />
+      <Label layoutX="313.0" layoutY="138.0" text="Bairro*" />
+      <Label layoutX="30.0" layoutY="138.0" text="Rua*" />
+      <Label layoutX="568.0" layoutY="74.0" text="E-mail*" />
+      <Label layoutX="313.0" layoutY="74.0" text="Nome" />
+      <Label layoutX="30.0" layoutY="74.0" text="CPF/CNPJ*" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f7f9fc" height="223.0" layoutX="14.0" layoutY="270.0" stroke="BLACK" strokeType="INSIDE" width="941.0" />
+      <Label layoutX="449.0" layoutY="298.0" prefHeight="17.0" prefWidth="108.0" text="Modelo do veiculo" />
+      <Label layoutX="197.0" layoutY="298.0" text="Marca*" />
+      <Label layoutX="28.0" layoutY="217.0" text="Complemento" />
+      <Label layoutX="24.0" layoutY="298.0" prefHeight="17.0" prefWidth="51.0" text="Placa" />
+      <Label layoutX="311.0" layoutY="217.0" text="Estado*" />
+      <Label layoutX="567.0" layoutY="217.0" text="Cidade*" />
+      <Label layoutX="629.0" layoutY="455.0" text="Validade*" />
+      <Label layoutX="303.0" layoutY="455.0" text="Previsão de Entrega*" />
+      <Label layoutX="30.0" layoutY="455.0" text="Valor total*" />
+      <Label layoutX="24.0" layoutY="338.0" text="Descrição do Serviço*" />
+      <Label layoutX="22.0" layoutY="-16.0" text="Dados do Orçamento" />
+      <TextField fx:id="tfCpfCnpj" layoutX="91.0" layoutY="70.0" prefHeight="25.0" prefWidth="211.0" />
+      <TextField fx:id="tfNome" layoutX="378.0" layoutY="70.0" prefHeight="25.0" prefWidth="172.0" />
+      <TextField fx:id="tfEmail" layoutX="629.0" layoutY="70.0" prefHeight="25.0" prefWidth="263.0" />
+      <TextField fx:id="tfRua" layoutX="76.0" layoutY="134.0" prefHeight="25.0" prefWidth="226.0" />
+      <TextField fx:id="tfBairro" layoutX="378.0" layoutY="134.0" prefHeight="25.0" prefWidth="172.0" />
+      <TextField fx:id="tfNumero" layoutX="596.0" layoutY="134.0" prefHeight="25.0" prefWidth="83.0" />
+      <TextField fx:id="tfFone" layoutX="761.0" layoutY="134.0" prefHeight="25.0" prefWidth="172.0" />
+      <TextField fx:id="tfComplemento" layoutX="113.0" layoutY="213.0" prefHeight="25.0" prefWidth="183.0" />
+      <ComboBox fx:id="cbEstado" layoutX="378.0" layoutY="213.0" prefHeight="25.0" prefWidth="172.0">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="Acre" />
+               <String fx:value="Alagoas" />
+               <String fx:value="Amapá" />
+               <String fx:value="Amazonas" />
+               <String fx:value="Bahia" />
+               <String fx:value="Ceará" />
+               <String fx:value="Distrito Federal" />
+               <String fx:value="Espírito Santo" />
+               <String fx:value="Goiás" />
+               <String fx:value="Maranhão" />
+               <String fx:value="Mato Grosso" />
+               <String fx:value="Mato Grosso do Sul" />
+               <String fx:value="Minas Gerais" />
+               <String fx:value="Pará" />
+               <String fx:value="Paraíba" />
+               <String fx:value="Paraná" />
+               <String fx:value="Pernambuco" />
+               <String fx:value="Piauí" />
+               <String fx:value="Rio de Janeiro" />
+               <String fx:value="Rio Grande do Norte" />
+               <String fx:value="Rio Grande do Sul" />
+               <String fx:value="Rondônia" />
+               <String fx:value="Roraima" />
+               <String fx:value="Santa Catarina" />
+               <String fx:value="São Paulo" />
+               <String fx:value="Sergipe" />
+               <String fx:value="Tocantins" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <TextField fx:id="tfCidade" layoutX="624.0" layoutY="213.0" prefHeight="25.0" prefWidth="226.0" />
+      <TextField fx:id="tfPlaca" layoutX="61.0" layoutY="294.0" prefHeight="25.0" prefWidth="115.0" />
+      <ComboBox fx:id="cbMarca" layoutX="260.0" layoutY="294.0" prefHeight="25.0" prefWidth="172.0">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="Chevrolet" />
+               <String fx:value="Fiat" />
+               <String fx:value="Ford" />
+               <String fx:value="Honda" />
+               <String fx:value="Hyundai" />
+               <String fx:value="Kya" />
+               <String fx:value="Mercedes" />
+               <String fx:value="Mitsubishi" />
+               <String fx:value="Nissan" />
+               <String fx:value="Toyota" />
+               <String fx:value="Volkswagen" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <TextField fx:id="tfModelo" layoutX="561.0" layoutY="294.0" prefHeight="25.0" prefWidth="189.0" />
+      <TextArea fx:id="taServico" layoutX="24.0" layoutY="361.0" prefHeight="64.0" prefWidth="850.0" />
+      <TextField fx:id="tfValor" layoutX="103.0" layoutY="451.0" prefHeight="25.0" prefWidth="172.0" />
+      <DatePicker fx:id="dpData" layoutX="422.0" layoutY="451.0" />
+      <TextField fx:id="tfValidade" layoutX="692.0" layoutY="451.0" />
+      <Button layoutX="400.0" layoutY="546.0" mnemonicParsing="false" onAction="#gerarOrcamento" text="Gerar Orçamento" />
+   </children>
+</AnchorPane>

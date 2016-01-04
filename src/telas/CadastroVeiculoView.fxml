@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="640.0" prefWidth="1200.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="telascontroller.CadastroVeiculoController">
+    <stylesheets>
+        <URL value="@/layout/cadastroveiculo.css" />
+    </stylesheets>
+   <children>
+      <TextArea fx:id="taAvisos" editable="false" layoutX="298.0" layoutY="137.0" prefHeight="79.0" prefWidth="258.0" visible="false" />
+      <Button fx:id="btOk" layoutX="410.0" layoutY="188.0" mnemonicParsing="false" onAction="#ok" prefHeight="17.0" prefWidth="33.0" text="OK" visible="false" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f7f9fc" height="174.0" layoutX="23.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" width="955.0" />
+      <Label layoutX="621.0" layoutY="126.0" text="Email" />
+      <Label layoutX="327.0" layoutY="126.0" text="CPF/CNPJ" />
+      <Label layoutX="32.0" layoutY="126.0" text="Nome " />
+      <Label layoutX="521.0" layoutY="61.0" text="Nome" />
+      <Label layoutX="262.0" layoutY="61.0" text="CNPJ" />
+      <Label layoutX="32.0" layoutY="62.0" text="CPF" />
+      <Label layoutX="29.0" layoutY="24.0" text="Buscar Cliente" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f7f9fc" height="372.0" layoutX="21.0" layoutY="199.0" stroke="BLACK" strokeType="INSIDE" width="1001.0" />
+      <Label layoutX="550.0" layoutY="279.0" text="Proprietario*" />
+      <Label layoutX="725.0" layoutY="232.0" text="Data de Entrada*" />
+      <Label layoutX="288.0" layoutY="279.0" text="Nº Chassi*" />
+      <Label layoutX="554.0" layoutY="232.0" text="Placa*" />
+      <Label layoutX="28.0" layoutY="279.0" text="Nº Renavam*" />
+      <Label layoutX="290.0" layoutY="232.0" text="Marca*" />
+      <Label layoutX="26.0" layoutY="232.0" text="Modelo*" />
+      <Label layoutX="28.0" layoutY="466.0" text="Valor total do serviço*" />
+      <Label layoutX="27.0" layoutY="322.0" text="Descrição do Serviço*" />
+      <Label layoutX="271.0" layoutY="322.0" text="Termino do Serviço*" />
+      <TextField fx:id="tfCpf" layoutX="68.0" layoutY="57.0" prefHeight="25.0" prefWidth="176.0" />
+      <TextField fx:id="tfCnpj" layoutX="309.0" layoutY="57.0" prefHeight="25.0" prefWidth="176.0" />
+      <TextField fx:id="tfNomeBusca" layoutX="571.0" layoutY="58.0" prefHeight="25.0" prefWidth="258.0" />
+      <Button layoutX="850.0" layoutY="54.0" mnemonicParsing="false" onAction="#buscar">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/icones/pesquisar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <TextField fx:id="tfNome" editable="false" layoutX="73.0" layoutY="125.0" prefHeight="25.0" prefWidth="205.0" />
+      <TextField fx:id="tfCpfCnpj" editable="false" layoutX="394.0" layoutY="122.0" prefHeight="25.0" prefWidth="183.0" />
+      <TextField fx:id="tfEmail" editable="false" layoutX="669.0" layoutY="122.0" prefHeight="25.0" prefWidth="258.0" />
+      <TextField fx:id="tfModelo" layoutX="89.0" layoutY="228.0" prefHeight="25.0" prefWidth="174.0" />
+      <ComboBox fx:id="cbMarca" layoutX="356.0" layoutY="228.0" prefHeight="25.0" prefWidth="167.0" visibleRowCount="5">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="Chevrolet" />
+               <String fx:value="Fiat" />
+               <String fx:value="Ford" />
+               <String fx:value="Honda" />
+               <String fx:value="Hyundai" />
+               <String fx:value="Kya" />
+               <String fx:value="Mercedes" />
+               <String fx:value="Mitsubishi" />
+               <String fx:value="Nissan" />
+               <String fx:value="Toyota" />
+               <String fx:value="Volkswagen" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <TextField fx:id="tfPlaca" layoutX="595.0" layoutY="228.0" prefHeight="25.0" prefWidth="111.0" />
+      <DatePicker fx:id="dpEntrada" layoutX="822.0" layoutY="228.0" />
+      <TextField fx:id="tfNrenavam" layoutX="104.0" layoutY="275.0" prefHeight="25.0" prefWidth="174.0" />
+      <TextField fx:id="tfNchassi" layoutX="356.0" layoutY="275.0" prefHeight="25.0" prefWidth="167.0" />
+      <TextField fx:id="tfProprietario" layoutX="629.0" layoutY="275.0" prefHeight="25.0" prefWidth="283.0" />
+      <DatePicker fx:id="dpTermino" layoutX="388.0" layoutY="318.0" />
+      <TextArea fx:id="taServico" layoutX="32.0" layoutY="359.0" prefHeight="79.0" prefWidth="955.0" />
+      <TextField fx:id="tfValorServico" layoutX="156.0" layoutY="462.0" />
+      <Button layoutX="345.0" layoutY="524.0" mnemonicParsing="false" onAction="#salvar" prefHeight="25.0" prefWidth="63.0" text="Salvar" />
+      <Button layoutX="439.0" layoutY="524.0" mnemonicParsing="false" onAction="#cancelar" prefWidth="63.0" text="Cancelar" />
+      <AnchorPane fx:id="anchorTabela" layoutX="58.0" layoutY="182.0" prefHeight="236.0" prefWidth="771.0" visible="false">
+         <children>
+            <TableView fx:id="tabelaBusca" layoutY="3.0" prefHeight="200.0" prefWidth="771.0">
+               <columns>
+                  <TableColumn fx:id="colunaNome" prefWidth="229.0" text="Nome">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="nomerazaoSocial" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="colunaCpfCnpj" prefWidth="165.0" text="CPF/CNPJ">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="cpfCnpj" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="colunaEmail" minWidth="3.0" prefWidth="158.0" text="Email">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="email" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="colunaRg" prefWidth="95.0" text="RG">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="rg" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="colunaTelefone" prefWidth="121.0" text="Telefone">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="telefone" />
+                     </cellValueFactory>
+                  </TableColumn>
+               </columns>
+            </TableView>
+            <Button fx:id="btFecharTabela" layoutX="350.0" layoutY="210.0" mnemonicParsing="false" onAction="#fecharTabela" text="Selecionar" visible="false" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

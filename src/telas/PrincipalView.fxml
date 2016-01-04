@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="telascontroller.TelaPrincipalController">
+   <children>
+      <ImageView fx:id="imgCliente" fitHeight="83.0" fitWidth="71.0" layoutX="20.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/icones/novoCliente.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="imgNovoVeiculo" fitHeight="69.0" fitWidth="74.0" layoutX="286.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/icones/veiculo.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="imgAlterarCliente" fitHeight="76.0" fitWidth="100.0" layoutX="121.0" layoutY="11.0">
+         <image>
+            <Image url="@/icones/alterarCliente.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Separator layoutX="263.0" layoutY="8.0" orientation="VERTICAL" prefHeight="98.0" prefWidth="5.0" />
+      <ImageView fx:id="imgAlterarVeiculo" fitHeight="69.0" fitWidth="76.0" layoutX="393.0" layoutY="14.0">
+         <image>
+            <Image url="@/icones/alterar.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Separator layoutX="497.0" layoutY="8.0" orientation="VERTICAL" prefHeight="98.0" prefWidth="5.0" />
+      <ImageView fx:id="imgServico" fitHeight="69.0" fitWidth="83.0" layoutX="512.0" layoutY="14.0">
+         <image>
+            <Image url="@/icones/servico.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Separator layoutX="607.0" layoutY="7.0" orientation="VERTICAL" prefHeight="98.0" prefWidth="5.0" />
+      <ImageView fx:id="imgOrcamento" fitHeight="83.0" fitWidth="90.0" layoutX="619.0" layoutY="14.0">
+         <image>
+            <Image url="@/icones/orcamento.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Separator layoutX="715.0" layoutY="7.0" orientation="VERTICAL" prefHeight="98.0" prefWidth="5.0" />
+      <ImageView fx:id="imgEstoque" fitHeight="76.0" fitWidth="100.0" layoutX="734.0" layoutY="11.0">
+         <image>
+            <Image url="@/icones/estoque.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Separator layoutX="851.0" layoutY="8.0" orientation="VERTICAL" prefHeight="98.0" prefWidth="5.0" />
+      <ImageView fx:id="imgConta" fitHeight="69.0" fitWidth="76.0" layoutX="869.0" layoutY="21.0">
+         <image>
+            <Image url="@/icones/contas.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Separator layoutY="112.0" prefWidth="1000.0" />
+      <Label layoutX="21.0" layoutY="89.0" text="Novo Cliente" />
+      <Label layoutX="133.0" layoutY="89.0" text="Alterar Cliente" />
+      <Label layoutX="276.0" layoutY="89.0" prefHeight="17.0" prefWidth="90.0" text="Veículo/Serviço" />
+      <Label layoutX="392.0" layoutY="89.0" text="Alterar Veículo" />
+      <Label layoutX="515.0" layoutY="89.0" text="Alterar Serviço" />
+      <Label layoutX="634.0" layoutY="89.0" text="Orçamento" />
+      <Label layoutX="764.0" layoutY="89.0" text="Estoque" />
+      <Label layoutX="889.0" layoutY="89.0" text="Contas" />
+   </children>
+</AnchorPane>

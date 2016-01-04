@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="telascontroller.EstoqueController">
+   <children>
+      <TableView fx:id="tabelaEstoque" layoutX="813.0" layoutY="254.0" prefHeight="200.0" prefWidth="467.0">
+        <columns>
+          <TableColumn fx:id="cPeca" prefWidth="131.0" text="Peça" />
+          <TableColumn fx:id="cFornecedor" prefWidth="234.0" text="Fornecedor" />
+            <TableColumn fx:id="cQtde" prefWidth="101.0" text="Quantidade" />
+        </columns>
+      </TableView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#eff0f2" height="200.0" layoutX="20.0" layoutY="20.0" stroke="BLACK" strokeType="INSIDE" width="372.0" />
+      <Label layoutX="24.0" layoutY="32.0" text="Fonecedor" />
+      <Label layoutX="26.0" layoutY="61.0" text="Nome*" />
+      <Label layoutX="26.0" layoutY="103.0" text="CNPJ*" />
+      <Label layoutX="26.0" layoutY="145.0" text="E-mail*" />
+      <TextField fx:id="tfNomeFornecedor" layoutX="69.0" layoutY="57.0" prefHeight="25.0" prefWidth="302.0" />
+      <TextField fx:id="tfCnpj" layoutX="69.0" layoutY="99.0" prefHeight="25.0" prefWidth="182.0" />
+      <TextField fx:id="tfEmail" layoutX="69.0" layoutY="141.0" prefHeight="25.0" prefWidth="268.0" />
+      <Button fx:id="btnSalvar" layoutX="92.0" layoutY="184.0" mnemonicParsing="false" onAction="#salvarFornecedor" text="Salvar" />
+      <Button fx:id="btnAlterar" layoutX="152.0" layoutY="184.0" mnemonicParsing="false" onAction="#alterarFornecedor" text="Alterar" />
+      <TableView fx:id="tabelaFornecedor" layoutX="813.0" layoutY="24.0" prefHeight="200.0" prefWidth="467.0">
+        <columns>
+          <TableColumn fx:id="cFornecedor1" prefWidth="128.0" text="Fornecedor" />
+          <TableColumn fx:id="cCnpj" prefWidth="129.0" text="CNPJ" />
+            <TableColumn fx:id="cEmail" prefWidth="186.0" text="E-mail" />
+        </columns>
+      </TableView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#eff0f2" height="208.0" layoutX="13.0" layoutY="256.0" stroke="BLACK" strokeType="INSIDE" width="385.0" />
+      <Label layoutX="20.0" layoutY="263.0" text="Peças" />
+      <Label layoutX="21.0" layoutY="299.0" text="Peça*" />
+      <TextField fx:id="tfPeca" layoutX="52.0" layoutY="295.0" />
+      <Label layoutX="215.0" layoutY="299.0" text="Quantidade*" />
+      <Label layoutX="20.0" layoutY="334.0" text="Fornecedor*" />
+      <TextField fx:id="tfQtde" layoutX="285.0" layoutY="295.0" prefHeight="25.0" prefWidth="102.0" />
+      <ComboBox fx:id="cbFornecedor" layoutX="92.0" layoutY="330.0" prefWidth="150.0" />
+      <Button fx:id="btnSalvar2" layoutX="92.0" layoutY="416.0" mnemonicParsing="false" onAction="#salvarEstoque" text="Salvar" />
+      <Button fx:id="btnAlterar2" layoutX="152.0" layoutY="416.0" mnemonicParsing="false" onAction="#alterarEstoque" text="Alterar" />
+      <Label fx:id="lbAdiciona" layoutX="20.0" layoutY="370.0" text="Adicionar quantidade" visible="false" />
+      <Label fx:id="lbRemove" layoutX="222.0" layoutY="370.0" text="Remover Quantidade" visible="false" />
+      <TextField fx:id="tfQtdeEntra" layoutX="143.0" layoutY="366.0" prefHeight="25.0" prefWidth="57.0" visible="false" />
+      <TextField fx:id="tfQtdeSai" layoutX="341.0" layoutY="366.0" prefHeight="25.0" prefWidth="51.0" visible="false" />
+      <Button fx:id="btnSalvarAlteracao" layoutX="216.0" layoutY="184.0" mnemonicParsing="false" onAction="#salvarAlteracaoFornecedor" text="Salvar Alterações" visible="false" />
+      <Button fx:id="btnSalvarAlteracao2" layoutX="216.0" layoutY="416.0" mnemonicParsing="false" onAction="#salvarAlteracaoEstoque" text="Salvar Alterações" visible="false" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#eff0f2" height="144.0" layoutX="409.0" layoutY="42.0" stroke="BLACK" strokeType="INSIDE" width="353.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#eff0f2" height="182.0" layoutX="409.0" layoutY="279.0" stroke="BLACK" strokeType="INSIDE" width="353.0" />
+      <Label layoutX="516.0" layoutY="49.0" text="Buscar Fornecedores" />
+      <Label layoutX="537.0" layoutY="287.0" text="Buscar Peças" />
+      <Label layoutX="416.0" layoutY="322.0" text="Peça" />
+      <TextField fx:id="tfPecaBusca" layoutX="451.0" layoutY="318.0" prefHeight="25.0" prefWidth="169.0" />
+      <Label layoutX="416.0" layoutY="352.0" text="Quantidade Inicial" />
+      <Label layoutX="592.0" layoutY="352.0" text="Quantidade Final" />
+      <TextField fx:id="tfQtdeInicial" layoutX="516.0" layoutY="348.0" prefHeight="25.0" prefWidth="63.0" />
+      <TextField fx:id="tfQtdeFinal" layoutX="689.0" layoutY="348.0" prefHeight="25.0" prefWidth="63.0" />
+      <Label layoutX="425.0" layoutY="79.0" text="Nome" />
+      <Label layoutX="427.0" layoutY="116.0" text="CNPJ" />
+      <TextField fx:id="tfNomeBusca" layoutX="473.0" layoutY="75.0" prefHeight="25.0" prefWidth="211.0" />
+      <TextField fx:id="tfCnpjBusca" layoutX="473.0" layoutY="112.0" prefHeight="25.0" prefWidth="211.0" />
+      <Button layoutX="496.0" layoutY="154.0" mnemonicParsing="false" onAction="#buscarFornecedor" text="Buscar" />
+      <Label layoutX="415.0" layoutY="391.0" text="Fornecedor" />
+      <ComboBox fx:id="cbFornecedorBusca" layoutX="496.0" layoutY="387.0" prefWidth="150.0" />
+      <Button layoutX="471.0" layoutY="429.0" mnemonicParsing="false" onAction="#buscarPeca" text="Buscar" />
+      <Button fx:id="canFornecedor" layoutX="152.0" layoutY="184.0" mnemonicParsing="false" onAction="#cancelarFornecedor" text="Cancelar" visible="false" />
+      <Button fx:id="canEstoque" layoutX="152.0" layoutY="416.0" mnemonicParsing="false" onAction="#cancelarEstoque" text="Cancelar" visible="false" />
+      <Button layoutX="529.0" layoutY="429.0" mnemonicParsing="false" onAction="#cancelarBuscaPecas" text="Cancelar" />
+      <Button layoutX="560.0" layoutY="154.0" mnemonicParsing="false" onAction="#buscarTodosFornecedores" text="Buscar Todos" />
+      <Button layoutX="594.0" layoutY="429.0" mnemonicParsing="false" onAction="#buscarTodosEstoque" text="Buscar Todos" />
+   </children>
+</AnchorPane>

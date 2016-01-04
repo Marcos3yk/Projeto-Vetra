@@ -1,0 +1,32 @@
+.label {
+    -fx-font-size: 12px;
+    -fx-font-family: "Times New Roman";
+    //-fx-font-weight: bold;
+    -fx-text-fill: #000000;
+    //-fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+}
+
+.image {
+    -fx-background-image: url("icones/novoCliente.png");
+    -fx-background-color: linear-gradient(#A020F0, #A020F0);
+    -fx-border-image-repeat: round;
+        
+}
+.root{
+    
+    //-fx-background-color: linear-gradient(#A020F0, #A020F0);
+}
+
+
+.image {
+    -fx-text-fill: black;
+    -fx-font-family: "Times New Roman";
+    -fx-font-weight: bold;
+    //-fx-background-color: linear-gradient(#FFFAFA, #00FF00);
+    -fx-cursor: hand;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+.image :hover {
+    -fx-background-color: linear-gradient(#FFFAFA, #00FF00);
+}

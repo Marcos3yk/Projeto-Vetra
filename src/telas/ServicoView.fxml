@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="telascontroller.ServicoController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f7f9fc" height="76.0" layoutX="14.0" layoutY="51.0" stroke="BLACK" strokeType="INSIDE" width="817.0" />
+      <ImageView fx:id="imgBuscaCliente" fitHeight="49.0" fitWidth="51.0" layoutX="701.0" layoutY="75.0">
+         <image>
+            <Image url="@/icones/pesquisar.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="306.0" layoutY="91.0" text="Nome/Razão Social" />
+      <Label layoutX="33.0" layoutY="91.0" text="CPF/CNPJ" />
+      <Label layoutX="21.0" layoutY="58.0" text="Buscar por Cliente" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f7f9fc" height="76.0" layoutX="14.0" layoutY="149.0" stroke="BLACK" strokeType="INSIDE" width="817.0" />
+      <ImageView fx:id="imgBuscaVeiculo" fitHeight="49.0" fitWidth="51.0" layoutX="701.0" layoutY="163.0">
+         <image>
+            <Image url="@/icones/pesquisar.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="456.0" layoutY="182.0" text="Nº Chassi" />
+      <Label layoutX="199.0" layoutY="182.0" text="Nº Renavam" />
+      <Label layoutX="33.0" layoutY="182.0" text="Placa" />
+      <Label layoutX="20.0" layoutY="155.0" text="Buscar por Veiculo" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f7f9fc" height="76.0" layoutX="14.0" layoutY="245.0" stroke="BLACK" strokeType="INSIDE" width="922.0" />
+      <Label layoutX="23.0" layoutY="288.0" text="Data Inicial" />
+      <Label layoutX="278.0" layoutY="288.0" text="Data término" />
+      <Label layoutX="25.0" layoutY="258.0" text="Buscar por Serviço" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f7f9fc" height="289.0" layoutX="14.0" layoutY="350.0" stroke="BLACK" strokeType="INSIDE" width="922.0" />
+      <Label fx:id="lbAviso" layoutX="300.0" layoutY="693.0" prefHeight="17.0" prefWidth="159.0" />
+      <Label layoutX="521.0" layoutY="552.0" text="CPF/CNPJ" />
+      <Label layoutX="240.0" layoutY="552.0" text="Cliente" />
+      <Label layoutX="29.0" layoutY="552.0" text="Valor*" />
+      <Label layoutX="564.0" layoutY="506.0" text="Serviço*" />
+      <Label layoutX="290.0" layoutY="506.0" text="Data Término*" />
+      <Label layoutX="27.0" layoutY="506.0" text="Data Entrada*" />
+      <Label layoutX="28.0" layoutY="409.0" text="Descrição do Serviço*" />
+      <Label layoutX="452.0" layoutY="370.0" text="Marca" />
+      <Label layoutX="29.0" layoutY="370.0" text="Placa" />
+      <Label layoutX="193.0" layoutY="370.0" text="Modelo" />
+      <ImageView fx:id="imgBuscaServico" fitHeight="49.0" fitWidth="51.0" layoutX="848.0" layoutY="264.0">
+         <image>
+            <Image url="@/icones/pesquisar.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <TextField fx:id="tfCpfCnpjbusca" layoutX="92.0" layoutY="89.0" prefHeight="25.0" prefWidth="201.0" />
+      <TextField fx:id="tfNomeRazaoSocial" layoutX="419.0" layoutY="89.0" prefHeight="25.0" prefWidth="258.0" />
+      <TextField fx:id="tfBuscaPlaca" layoutX="65.0" layoutY="178.0" prefHeight="25.0" prefWidth="117.0" />
+      <TextField fx:id="tfRenavam" layoutX="275.0" layoutY="178.0" prefHeight="25.0" prefWidth="166.0" />
+      <TextField fx:id="tfChassi" layoutX="525.0" layoutY="178.0" prefHeight="25.0" prefWidth="166.0" />
+      <DatePicker fx:id="dpBuscaInicio" layoutX="95.0" layoutY="284.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </DatePicker>
+      <DatePicker fx:id="dpBuscaFim" layoutX="354.0" layoutY="284.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </DatePicker>
+      <RadioButton fx:id="rbBuscaAndamento" layoutX="540.0" layoutY="288.0" mnemonicParsing="false" text="Em andamento">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </RadioButton>
+      <RadioButton fx:id="rbBuscaConcluido" layoutX="655.0" layoutY="288.0" mnemonicParsing="false" text="Concluido">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </RadioButton>
+      <RadioButton fx:id="rbBuscaCancelado" layoutX="738.0" layoutY="288.0" mnemonicParsing="false" text="Cancelado">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </RadioButton>
+      <TextField fx:id="tfMarca" disable="true" editable="false" layoutX="493.0" layoutY="366.0" prefHeight="25.0" prefWidth="187.0" />
+      <TextField fx:id="tfVeiculo" disable="true" editable="false" layoutX="261.0" layoutY="366.0" prefHeight="25.0" prefWidth="180.0" />
+      <TextField fx:id="tfPlaca" disable="true" editable="false" layoutX="80.0" layoutY="366.0" prefHeight="25.0" prefWidth="102.0" />
+      <TextArea fx:id="taDescricao" layoutX="26.0" layoutY="434.0" prefHeight="49.0" prefWidth="764.0" />
+      <DatePicker fx:id="dpEntrada" layoutX="109.0" layoutY="502.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </DatePicker>
+      <DatePicker fx:id="dpTermino" layoutX="384.0" layoutY="502.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </DatePicker>
+      <RadioButton fx:id="rbAndamento" layoutX="616.0" layoutY="506.0" mnemonicParsing="false" text="Em andamento">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </RadioButton>
+      <RadioButton fx:id="rbConcluido" layoutX="744.0" layoutY="506.0" mnemonicParsing="false" text="Concluido">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </RadioButton>
+      <RadioButton fx:id="rbCancelado" layoutX="852.0" layoutY="506.0" mnemonicParsing="false" text="Cancelado">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </RadioButton>
+      <TextField fx:id="tfCpfCnpj" disable="true" editable="false" layoutX="586.0" layoutY="548.0" prefHeight="25.0" prefWidth="201.0" />
+      <TextField fx:id="tfCliente" disable="true" editable="false" layoutX="293.0" layoutY="548.0" prefHeight="25.0" prefWidth="207.0" />
+      <TextField fx:id="tfValor" layoutX="80.0" layoutY="548.0" />
+      <Button layoutX="471.0" layoutY="654.0" mnemonicParsing="false" onAction="#cancelar" text="Cancelar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="329.0" layoutY="654.0" mnemonicParsing="false" onAction="#salvar" text="Salvar Alterações">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <AnchorPane fx:id="anchorTabela" layoutX="40.0" layoutY="143.0" prefHeight="243.0" prefWidth="902.0" visible="false">
+         <children>
+            <TableView fx:id="tabelaBusca" prefHeight="205.0" prefWidth="902.0" visible="false">
+               <columns>
+                  <TableColumn fx:id="colunaNome" prefWidth="152.0" text="Nome">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="servico.veiculo.pessoa" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="colunaCpfCnpj" prefWidth="125.0" text="CPF/CNPJ">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="cpfCnpj" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="colunaVeiculo" prefWidth="135.0" text="Veiculo">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="veiculo" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="colunaPlaca" prefWidth="77.0" text="Placa">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="placa" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="colunaStatus" prefWidth="107.0" text="Servico">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="status" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="colunaDataEntrada" prefWidth="107.0" text="Data Entrada">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="dataEntrada" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="colunaDataTermino" prefWidth="104.0" text="Término">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="dataTermino" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="colunaValor" prefWidth="94.0" text="Valor">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="valor" />
+                     </cellValueFactory>
+                  </TableColumn>
+               </columns>
+            </TableView>
+            <Button fx:id="btnFechar" layoutX="416.0" layoutY="217.0" mnemonicParsing="false" onAction="#fecharTabela" text="Selecionar" visible="false" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

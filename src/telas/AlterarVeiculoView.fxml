@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="telascontroller.AlterarVeiculoController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f7f9fc" height="76.0" layoutX="24.0" layoutY="36.0" stroke="BLACK" strokeType="INSIDE" width="982.0" />
+      <ImageView fx:id="imgBuscar" fitHeight="40.0" fitWidth="42.0" layoutX="962.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/icones/pesquisar.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <TextField fx:id="tfBuscaPlaca" layoutX="79.0" layoutY="63.0" prefHeight="25.0" prefWidth="71.0" />
+      <Label layoutX="745.0" layoutY="67.0" text="Modelo" />
+      <Label layoutX="533.0" layoutY="67.0" text="Marca" />
+      <Label layoutX="358.0" layoutY="67.0" text="Chassi" />
+      <Label layoutX="162.0" layoutY="67.0" text="Renavam" />
+      <Label layoutX="45.0" layoutY="66.0" text="Placa" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f7f9fc" height="176.0" layoutX="24.0" layoutY="288.0" stroke="BLACK" strokeType="INSIDE" width="982.0" />
+      <Label layoutX="294.0" layoutY="360.0" text="Marca*" />
+      <Label layoutX="504.0" layoutY="360.0" text="Placa*" />
+      <Label layoutX="294.0" layoutY="404.0" text="Nº Chassi*" />
+      <Label layoutX="549.0" layoutY="404.0" text="Proprietario*" />
+      <Label layoutX="36.0" layoutY="404.0" text="Nº Renavam*" />
+      <Label layoutX="38.0" layoutY="360.0" text="Modelo*" />
+      <Label layoutX="686.0" layoutY="360.0" text="Data de Entrada*" />
+      <Label layoutX="36.0" layoutY="300.0" text="Veiculo Buscado" />
+      <Button fx:id="btnSelecionar" layoutX="455.0" layoutY="320.0" mnemonicParsing="false" onAction="#fecharTabela" text="Selecionar" visible="false" />
+      <TableView fx:id="tabelaBusca" layoutX="236.0" layoutY="112.0" prefHeight="200.0" prefWidth="495.0" visible="false">
+         <columns>
+            <TableColumn fx:id="colunaCliente" prefWidth="119.0" text="Cliente" />
+            <TableColumn fx:id="colunaProprietario" prefWidth="81.0" text="Proprietrio" />
+            <TableColumn fx:id="colunaVeiculo" prefWidth="98.0" text="Veiculo" />
+            <TableColumn fx:id="colunaPlaca" prefWidth="74.0" text="Placa" />
+            <TableColumn fx:id="colunaMarca" prefWidth="122.0" text="Marca" />
+         </columns>
+      </TableView>
+      <TextField fx:id="tfBuscaRenavam" layoutX="215.0" layoutY="62.0" prefHeight="25.0" prefWidth="136.0" />
+      <TextField fx:id="tfBuscaChassi" layoutX="398.0" layoutY="63.0" prefHeight="25.0" prefWidth="130.0" />
+      <ComboBox fx:id="cbBuscaMarca" layoutX="585.0" layoutY="63.0" prefWidth="150.0" visibleRowCount="5">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="Chevrolet" />
+               <String fx:value="Fiat" />
+               <String fx:value="Ford" />
+               <String fx:value="Honda" />
+               <String fx:value="Hyundai" />
+               <String fx:value="Kya" />
+               <String fx:value="Mercedes" />
+               <String fx:value="Mitsubishi" />
+               <String fx:value="Nissan" />
+               <String fx:value="Toyota" />
+               <String fx:value="Volkswagen" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <TextField fx:id="tfBuscaModelo" layoutX="795.0" layoutY="63.0" />
+      <TextField fx:id="tfModelo" layoutX="115.0" layoutY="356.0" prefHeight="25.0" prefWidth="174.0" />
+      <ComboBox fx:id="cbMarca" layoutX="341.0" layoutY="356.0" prefWidth="150.0" visibleRowCount="5">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="Chevrolet" />
+               <String fx:value="Fiat" />
+               <String fx:value="Ford" />
+               <String fx:value="Honda" />
+               <String fx:value="Hyundai" />
+               <String fx:value="Kya" />
+               <String fx:value="Mercedes" />
+               <String fx:value="Mitsubishi" />
+               <String fx:value="Nissan" />
+               <String fx:value="Toyota" />
+               <String fx:value="Volkswagen" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <TextField fx:id="tfPlaca" layoutX="553.0" layoutY="356.0" prefHeight="25.0" prefWidth="111.0" />
+      <DatePicker fx:id="dpEntrada" layoutX="795.0" layoutY="356.0" />
+      <TextField fx:id="tfNrenavam" layoutX="115.0" layoutY="400.0" prefHeight="25.0" prefWidth="174.0" />
+      <TextField fx:id="tfNchassi" layoutX="363.0" layoutY="400.0" prefHeight="25.0" prefWidth="167.0" />
+      <TextField fx:id="tfProprietario" layoutX="637.0" layoutY="400.0" prefHeight="25.0" prefWidth="283.0" />
+      <Button layoutX="344.0" layoutY="498.0" mnemonicParsing="false" onAction="#salvar" text="Salvar Alterações">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="473.0" layoutY="498.0" mnemonicParsing="false" onAction="#cancelar" text="Cancelar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

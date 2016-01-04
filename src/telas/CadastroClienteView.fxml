@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="telascontroller.CadastroClienteController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f7f9fc" height="207.0" layoutX="147.0" layoutY="122.0" stroke="BLACK" strokeType="INSIDE" width="1007.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f7f9fc" height="207.0" layoutX="147.0" layoutY="378.0" stroke="BLACK" strokeType="INSIDE" width="1007.0" />
+      <Label layoutX="145.0" layoutY="97.0" prefHeight="17.0" prefWidth="139.0" text="Cliente" />
+      <Label layoutX="519.0" layoutY="252.0" text="Celular" />
+      <Label layoutX="181.0" layoutY="252.0" prefHeight="17.0" prefWidth="66.0" text="Telefone" />
+      <Label fx:id="lbRazaoSocial" layoutX="775.0" layoutY="170.0" text="Razão Social*" />
+      <Label fx:id="lbRg" layoutX="519.0" layoutY="212.0" text="RG*" />
+      <Label fx:id="lbEmail" layoutX="779.0" layoutY="212.0" text="Email*" />
+      <Label fx:id="lbNome" layoutX="181.0" layoutY="212.0" text="Nome*" />
+      <Label fx:id="lbCpfCnpj" layoutX="519.0" layoutY="170.0" text="CPF/CNPJ*" />
+      <Label layoutX="181.0" layoutY="170.0" prefHeight="17.0" prefWidth="99.0" text="Tipo de pessoa*" />
+      <Label layoutX="691.0" layoutY="450.0" text="Complemento" />
+      <Label layoutX="692.0" layoutY="496.0" prefHeight="17.0" prefWidth="37.0" text="Bairro*" />
+      <Label layoutX="163.0" layoutY="450.0" text="CEP*" />
+      <Label layoutX="1035.0" layoutY="450.0" text="Nº*" />
+      <Label layoutX="410.0" layoutY="496.0" prefHeight="17.0" prefWidth="44.0" text="Cidade*" />
+      <Label layoutX="160.0" layoutY="496.0" prefHeight="17.0" prefWidth="53.0" text="Estado*" />
+      <Label layoutX="411.0" layoutY="450.0" text="Rua*" />
+      <Label layoutX="145.0" layoutY="350.0" text="Endereço" />
+      <ComboBox fx:id="cbTipoPessoa" layoutX="280.0" layoutY="166.0" prefWidth="150.0">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="Fisica" />
+               <String fx:value="Juridica" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <TextField fx:id="tfCpfCnpj" layoutX="584.0" layoutY="166.0" prefHeight="25.0" prefWidth="166.0" />
+      <TextField fx:id="tfRazaoSocial" layoutX="860.0" layoutY="166.0" prefHeight="25.0" prefWidth="270.0" />
+      <TextField fx:id="tfNome" layoutX="247.0" layoutY="208.0" prefHeight="25.0" prefWidth="252.0" />
+      <TextField fx:id="tfRg" layoutX="584.0" layoutY="208.0" prefHeight="25.0" prefWidth="166.0" />
+      <TextField fx:id="tfEmail" layoutX="860.0" layoutY="208.0" prefHeight="25.0" prefWidth="270.0" />
+      <TextField fx:id="tfTelefone" layoutX="247.0" layoutY="248.0" prefHeight="25.0" prefWidth="177.0" />
+      <TextField fx:id="tfCelular" layoutX="584.0" layoutY="248.0" prefHeight="25.0" prefWidth="166.0" />
+      <TextField fx:id="tfCep" layoutX="213.0" layoutY="446.0" prefHeight="25.0" prefWidth="187.0" />
+      <TextField fx:id="tfRua" layoutX="457.0" layoutY="446.0" prefHeight="25.0" prefWidth="210.0" />
+      <TextField fx:id="tfComplemento" layoutX="779.0" layoutY="446.0" prefHeight="25.0" prefWidth="235.0" />
+      <TextField fx:id="tfNumero" layoutX="1058.0" layoutY="446.0" prefHeight="25.0" prefWidth="82.0" />
+      <ComboBox fx:id="cbEstado" layoutX="213.0" layoutY="492.0" prefHeight="25.0" prefWidth="187.0" visibleRowCount="4">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="Acre" />
+               <String fx:value="Alagoas" />
+               <String fx:value="Amapá" />
+               <String fx:value="Amazonas" />
+               <String fx:value="Bahia" />
+               <String fx:value="Ceará" />
+               <String fx:value="Distrito Federal" />
+               <String fx:value="Espírito Santo" />
+               <String fx:value="Goiás" />
+               <String fx:value="Maranhão" />
+               <String fx:value="Mato Grosso" />
+               <String fx:value="Mato Grosso do Sul" />
+               <String fx:value="Minas Gerais" />
+               <String fx:value="Pará" />
+               <String fx:value="Paraíba" />
+               <String fx:value="Paraná" />
+               <String fx:value="Pernambuco" />
+               <String fx:value="Piauí" />
+               <String fx:value="Rio de Janeiro" />
+               <String fx:value="Rio Grande do Norte" />
+               <String fx:value="Rio Grande do Sul" />
+               <String fx:value="Rondônia" />
+               <String fx:value="Roraima" />
+               <String fx:value="Santa Catarina" />
+               <String fx:value="São Paulo" />
+               <String fx:value="Sergipe" />
+               <String fx:value="Tocantins" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <TextField fx:id="tfCidade" layoutX="457.0" layoutY="492.0" prefHeight="25.0" prefWidth="210.0" />
+      <TextField fx:id="tfBairro" layoutX="779.0" layoutY="492.0" prefHeight="25.0" prefWidth="235.0" />
+      <Button fx:id="btnSalvar" layoutX="557.0" layoutY="629.0" mnemonicParsing="false" onAction="#salvar" prefHeight="25.0" prefWidth="62.0" text="Salvar" />
+      <Button fx:id="btnCancelar" layoutX="651.0" layoutY="629.0" mnemonicParsing="false" onAction="#cancelar" text="Cancelar" />
+   </children>
+</AnchorPane>
